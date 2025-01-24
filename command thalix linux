@@ -1,0 +1,73 @@
+# SEPROCESSING
+
+su #logintoroootuserinenvironmentbefore
+su - #loginroottoenvironmentsuperuser
+cd #go to path home
+cd ~ #gotohome
+cd - #gotopathbefore
+alias #seesomecommandhaveshortcut
+alias name='command' #shortcutcommand
+unalias name #remove
+tree #seepart
+tree -L 2 #seepart2level
+history #showcommandbefore
+echo $HISTSIZE #seesizeofHISTORY
+whoami #chuankuekai
+file "network_latency" #aftercommandfileisfiledoyouwanttoseeTypeofFile #answer network_latency: character special
+    file rtc #answer rtc: symbolic link to `rtc0'
+chmod g+w stop_node #meanincreasegrouptowrite
+chmod 777 stop_node #changeauthorize
+chown system:EUROCAT "File" #changeownerfilelm  
+ls -la stop_node #seeauthorize
+cat test_1 #seeinformationintest_1
+    #!/bin/bash
+
+    echo "hello world " #answer 
+bash test_1
+or
+. test_1     #mustbeexcecuteforsee
+touch "filexx" #createfilefreespace
+stat stop_node #check create-modify-change
+cat test #showfileall
+head test #showfile10line
+head -2 test #show2linefromupper
+tail -2 test #show2linefromlower
+tail -f message #showlogrealtime
+tail -F message #showlogrealtime in case system runscript changefile from log0 to log1 smoothly
+more message #samecatbutshow1page2page cannot back
+less message #samecatbutshow1page2page can back
+ln -s /opt/ref/ROUTES.ASF route_2.asf #pointfiletoanotherdevicedisk  usefordataset
+unlink route.asf #unlinkfile
+ls -al *MRT_nodelist #seefile
+ls -al ?MRT_nodelist
+cp stop* ns #copyfile to directory ns
+cp -p start* ns #keeporiginaldateoffile
+cp -a tp ns #compydirectory -a or -rp
+mv start_node start_node_smook
+rm -i stop_node #askbeforeremove
+rm -r ns #removefolder
+rm -ir ns #ask before removefolder
+date >> test #inputdatetofiletest run nonstop
+date > test #inputdatetofiletest replace
+ls -l rrr 2>> test #fileerror(not real) input to file test
+cat SURT_nodelist |wc -l #nodecount line
+cat SURT_nodelist |wc -c #nodecount charactor
+cat test_sort |sort #cat sort little to many
+cat test_sort |sort -r #cat sort many to little
+ll |sort -k 3 #show sort listcolumt3
+ll |sort -nk 5 #show sort listcolumt5 as number
+cat /etc/passwd | grep system #findsystem wording
+cat /etc/passwd | grep ^system #findsystem first wording
+    systemd-bus-proxy:x:999:998:systemd Bus Proxy:/:/sbin/nologin
+    systemd-network:x:998:997:systemd Network Management:/:/sbin/nologin
+    system:x:1029:117:ATC System account:/opt/system:/bin/bash
+cat /etc/passwd | grep ^system |grep -v ^systemd #findsystem first wording and not include systemd
+    system:x:1029:117:ATC System account:/opt/system:/bin/bash
+sed -n '3p' testsort #showline3infiletestsort
+echo h* #samelisth*
+echo -e "\e[1m hello \e[m" #hello can set collor 1m to 33m to 55m
+echo $((2+2)) #match
+echo $((24**2)) #match24*24
+echo $((24%2)) #matchmod
+echo {1..4} #runnumber 1 2 3 4
+sleep 10 #sleep 1- second for nap server
