@@ -66,8 +66,8 @@ cat /etc/passwd | grep ^system |grep -v ^systemd #findsystem first wording and n
 sed -n '3p' testsort #showline3infiletestsort
 echo h* #samelisth*
 echo -e "\e[1m hello \e[m" #hello can set collor 1m to 33m to 55m
-echo $((2+2)) #match
-echo $((24**2)) #match24*24
-echo $((24%2)) #matchmod
+echo $((2+2)) #math
+echo $((24**2)) #math24*24
+echo $((24%2)) #mathmod
 echo {1..4} #runnumber 1 2 3 4
 sleep 10 #sleep 1- second for nap server
