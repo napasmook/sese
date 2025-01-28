@@ -66,8 +66,75 @@ cat /etc/passwd | grep ^system |grep -v ^systemd #findsystem first wording and n
 sed -n '3p' testsort #showline3infiletestsort
 echo h* #samelisth*
 echo -e "\e[1m hello \e[m" #hello can set collor 1m to 33m to 55m
-echo $((2+2)) #math
-echo $((24**2)) #math24*24
-echo $((24%2)) #mathmod
+echo $((2+2)) #match
+echo $((24**2)) #match24*24
+echo $((24%2)) #matchmod
 echo {1..4} #runnumber 1 2 3 4
 sleep 10 #sleep 1- second for nap server
+--------------------------------
+#28012025
+vi > esc >  :%s/and/or   #searchandreplace
+vi > esc > yy   p  #copypaste
+https://saixiii.com/vi-linux-command/#google_vignette
+tar cvfp hi hi.tar   #compressfileinfolder
+tar cvfpz hi.tarz hi/ #compresszipfileinfolder
+tar xvfp hi.tar #unzipfile.tar
+tar tvfp hi.tarz #seefile
+start_tksup #openterminaltksup
+start_node
+lsc show nodes #showstatus
+lsc show sw #ifshow0000normal
+lsc show system #showstatus and show master slave
+ssh baccdso01li
+cd /ref/traces/   #seelogfileindso  kafka sent log from every node to dso
+scp server:path .
+stop_node
+tx #checkstatus
+mpcv
+    baccsda1ali $ ll
+    total 20
+    drwxr-xr-x 2 system EUROCAT 4096 Aug 25  2022 TOPSKYATC-tmcs_mops_gold-R_20.2.9.0_0
+    drwxr-xr-x 2 system EUROCAT 4096 Jul  8  2024 TOPSKYATC-tmcs_mops_gold-R_22.2.13_0
+    drwxr-xr-x 2 system EUROCAT 4096 Dec  7  2023 TOPSKYATC-tmcs_mops_green-R_21.2.11.0_0
+    drwxr-xr-x 2 system EUROCAT 4096 Apr 22  2024 TOPSKYATC-tmcs_mops_green-R_22.2.11.2_0
+    drwxr-xr-x 2 system EUROCAT 4096 Jul  8  2024 TOPSKYATC-tmcs_mops_green-R_22.2.13_0
+ cat TOPSKYATC-tmcs_mops_green-R_21.2.11.0_0.mpcv 
+<?xml version="1.0"?>
+<MPCV>
+  <MPCVname>TOPSKYATC-tmcs_mops_green-R_21.2.11.0_0</MPCVname>
+  <MPCname>TOPSKYATC</MPCname>
+  <supportedMission>CIV_MIL</supportedMission>
+  <supportedStateCombination>OPERATIONAL</supportedStateCombination>
+  <creationDateTime>2023-12-07T08:42:59.0Z</creationDateTime>
+  <reason/>
+  <PCVList>
+    <PCV>
+      <PCVname>UBSSHE-tmcs_mops_snrt_ops_green-R_21.2.11.0_0</PCVname>
+      <PCname>UBSSHE</PCname>
+    </PCV>
+    <PCV>
+      <PCVname>UBSSHE-tmcs_mops_strt_by_green-R_21.2.11.0_0</PCVname>
+      <PCname>UBSSHE</PCname>
+    </PCV>
+    <PCV>
+      <PCVname>UBSSHE-tmcs_mops_surt_ops_green-R_21.2.11.0_0</PCVname>
+      <PCname>UBSSHE</PCname>
+    </PCV>
+    <PCV>
+      <PCVname>UBSSHE-tmcs_mops_pert_ops_green-R_21.2.11.0_0</PCVname>
+      <PCname>UBSSHE</PCname>
+    </PCV>
+pcv
+    baccsda1ali $ ll
+    total 20
+    drwxr-xr-x 2 system EUROCAT 4096 Aug 25  2022 UBSSHE-tmcs_mops_bacc_by_gold-R_20.2.9.0_0
+    drwxr-xr-x 2 system EUROCAT 4096 Jul  8  2024 UBSSHE-tmcs_mops_bacc_by_gold-R_22.2.13_0
+    drwxr-xr-x 2 system EUROCAT 4096 Dec  7  2023 UBSSHE-tmcs_mops_bacc_by_green-R_21.2.11.0_0
+    drwxr-xr-x 2 system EUROCAT 4096 Apr 22  2024 UBSSHE-tmcs_mops_bacc_by_green-R_22.2.11.2_0
+    drwxr-xr-x 2 system EUROCAT 4096 Jul  8  2024 UBSSHE-tmcs_mops_bacc_by_green-R_22.2.13_0
+spv 
+vers #checksoftware
+    or
+get_conf_version_name
+    or
+echo $CONF_VERSION_NAME #tmcs_mops_green-R_22.2.13_0
