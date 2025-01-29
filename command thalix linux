@@ -67,8 +67,8 @@ sed -n '3p' testsort #showline3infiletestsort
 echo h* #samelisth*
 echo -e "\e[1m hello \e[m" #hello can set collor 1m to 33m to 55m
 echo $((2+2)) #match
-echo $((24**2)) #match24*24
-echo $((24%2)) #matchmod
+echo $((24**2)) #math24*24
+echo $((24%2)) #mathmod
 echo {1..4} #runnumber 1 2 3 4
 sleep 10 #sleep 1- second for nap server
 --------------------------------
@@ -85,6 +85,8 @@ start_node
 lsc show nodes #showstatus
 lsc show sw #ifshow0000normal
 lsc show system #showstatus and show master slave
+lsc show dev #showdevice
+lsc start_rep #startfninnode ex. fn rep
 ssh baccdso01li
 cd /ref/traces/   #seelogfileindso  kafka sent log from every node to dso
 scp server:path .
@@ -138,3 +140,5 @@ vers #checksoftware
 get_conf_version_name
     or
 echo $CONF_VERSION_NAME #tmcs_mops_green-R_22.2.13_0
+vi software_history #show date software update
+start_dpr_session #startgui dpr
