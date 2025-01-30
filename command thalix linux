@@ -142,3 +142,45 @@ get_conf_version_name
 echo $CONF_VERSION_NAME #tmcs_mops_green-R_22.2.13_0
 vi software_history #show date software update
 start_dpr_session #startgui dpr
+--------------------------------
+#30012025 awk
+message | grep JHMI #find filterJHMI
+message | grep JHMI | awk '{print $1}' #find filter column 1
+message | grep JHMI | awk '{print $1}' > MMI #keepfile to text name MMI can cat for see it
+message | grep CDP | awk '{print $2" and "$3}'
+  bacccdp1ali and bacccdp1bli
+  bacccdp1ali and bacccdp1bli
+  bacccdp2ali and bacccdp2bli
+  bacccdp2ali and bacccdp2bli
+  bacccdp3ali and bacccdp3bli
+  bacccdp3ali and bacccdp3bli
+sed "s/ali/alis/g" MMI   #search ali in file MMI change to alis just show output not change in file : g mean all line in file
+sed -i "s/ali/alis/g" MMI #search ali in file MMI change to alis change in file : g mean all line in file
+watch '\''lsc show nodes'\' #seenodeevery 2 second
+  or
+wn #see in alias
+ lshw -short #list hardware and network
+ lisusb #check what device connect server ex mount keyboard ...
+ifconfig #check eth and bonding can check macaddress 
+  or
+ip a 
+cat /proc/net/bonding/bond0  #check bonding which eth master and slave >>>> Currently Active Slave: eth1
+dmidecode #status device hardware must be login su 
+dmidecode --type bios
+dmidecode |grep -i ser #checkserial if updait serial number pls technical update serial number in bios ...
+tkdiff
+tkdiff abc1 abc2
+ps -ef |grep vim #checkbackendrun
+pkill -9 xterm #stop this process 
+ubss_stop.sh node list #update backupserverwillstop  node list > maybe name node of file node name
+ubss_start.sh node list #update backupserverwillstart
+ab=`qwert` #run value qwert save in ab
+  echo $ab  # qwertshow
+ab=$(qwert) #run value qwert save in ab
+  echo $ab  # qwertshow
+/ref/traces/2025-01-27/tmcs_mops_bacc_ops_green-R_22.2.13_0/baccfdp1ali #seelog fdp filght
+  zgrep "AIQ3438" * gzip #search log file of current day just zgrep * gzip
+  or
+  zgrep "AIQ3438" * .gz #search log file of current day in folder just zgrep * .gz
+  or
+  zgrep "AIQ3438" ../../ #search log file of any day just zgrep "AIQ3438"
