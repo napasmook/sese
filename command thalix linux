@@ -159,17 +159,30 @@ sed -i "s/ali/alis/g" MMI #search ali in file MMI change to alis change in file 
 watch '\''lsc show nodes'\' #seenodeevery 2 second
   or
 wn #see in alias
- lshw -short #list hardware and network
- lisusb #check what device connect server ex mount keyboard ...
+lshw -short #list hardware and network
+lisusb #check what device connect server ex mount keyboard ...
+ping #check link internet
+traceroute #check route from server
 ifconfig #check eth and bonding can check macaddress 
   or
-ip a 
+ip a #check deviceeip can check macaddress 
 cat /proc/net/bonding/bond0  #check bonding which eth master and slave >>>> Currently Active Slave: eth1
 dmidecode #status device hardware must be login su 
 dmidecode --type bios
 dmidecode |grep -i ser #checkserial if updait serial number pls technical update serial number in bios ...
-tkdiff
-tkdiff abc1 abc2
+diff abc1 abc2 #compareset file and set file
+
+  12c12
+< CDP045_OPER         bacccdp3ali bacccdp3bli # < CDP045 อยู่ใน abc1#
+---
+> CDP145_OPER         bacccdp3ali bacccdp3bli # > CDP045 อยู่ใน abc2#
+
+26c26
+< REP001_REPL         baccasp01li
+---
+> REP002_REPL         baccasp01li
+
+tkdiff abc1 abc2 #openfile compare in browser
 ps -ef |grep vim #checkbackendrun
 pkill -9 xterm #stop this process 
 ubss_stop.sh node list #update backupserverwillstop  node list > maybe name node of file node name
@@ -184,3 +197,47 @@ ab=$(qwert) #run value qwert save in ab
   zgrep "AIQ3438" * .gz #search log file of current day in folder just zgrep * .gz
   or
   zgrep "AIQ3438" ../../ #search log file of any day just zgrep "AIQ3438"
+df -h #free space humen read eiei
+ntpq -p #show timeandserver ex server a sync time with serber b, c, d 
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+*baccntp1atms    10.82.18.214     2 u  109  128  377    0.189    0.127   0.086
+-baccntp1btms    10.82.18.216     2 u   83  128  377    0.192    1.042   0.209
+-bacccdp1bli     10.82.130.211    3 u  125  128  376    0.135   -0.022   0.100
++baccasp01li     10.82.130.211    3 u   19  128  377    0.200   -0.562   0.154
++baccmsb1ali     10.82.130.211    3 u   35  128  377    0.199    0.005   0.034
+timedatectl #show time current system
+
+      Local time: Thu 2025-01-30 07:02:40 UTC
+  Universal time: Thu 2025-01-30 07:02:40 UTC
+        RTC time: Thu 2025-01-30 07:02:40
+       Time zone: UTC (UTC, +0000)
+     NTP enabled: no
+NTP synchronized: yes
+ RTC in local TZ: no
+      DST active: n/a
+hwclock -w #command time os update to rtc
+crontab -l #showfunction
+MAILTO=""
+#BEGIN_UBSS_BLOCK
+10 15 * * * /opt/system/PcvCurrent/CONFM_EXE_RESMS_UTIL/share/runtime/bin/clean_coredumps.sh > /tmp/clean_coredumps.log 2>&1
+#END_UBSS_BLOCK
+crontab -e #edit /etc/crontab
+path /var/spool/cron #see cronjob everyuser
+--------------------------------
+#31012025 .sh
+abc="bacctks04li" #declaration variable show bacctks04li
+echo "hello ${abc^^}" #show HELLO BACCTKS04LI
+      ------#infile sh-------------
+#!/bin/bash
+# comment
+
+echo "hello"        
+echo -e "\e[37m hello color \e[m"  
+echo "hello ${abc}"
+
+if [${node_name::4} == "bacc" ] ;then   
+   echo -e "\e[92m BACC \e[m"
+else
+   sleep 10
+fi
